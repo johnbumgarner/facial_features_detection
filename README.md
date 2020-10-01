@@ -1,14 +1,10 @@
 # under construction
 
-# facial_detection_prediction-
-This repository provides various Python methods for performing facial detection and facial recognition.
-
-
 <p align="center">
   <img src="https://github.com/johnbumgarner/image_closeness_experiments/blob/master/graphic/facial_recognition.png"/>
 </p>
 
-# Overview Image Similarities 
+# Overview Facial Detection and Prediction
 
 <p align="justify">
 
@@ -24,7 +20,6 @@ This repository is going to examine several of the methods used to ascertain if 
 
 Another objective of this repository is to determine the capabilities and limitations of the Python libraries used to perform these image simarility tests.
 </p>
-
 
 
 ## Facial Detection/Recognition/Prediction Experiments
@@ -53,6 +48,13 @@ During testing it was noted that all these Haar Cascade classifiers were tempera
 <p align="center"> <br>
 <img src="https://github.com/johnbumgarner/image_simarility_experiments/blob/master/haar_cascade_features.jpg">
 </p>
+
+
+
+
+
+
+
 
 ### Experiment 2:
 
