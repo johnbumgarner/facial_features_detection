@@ -27,40 +27,44 @@ Another objective of this repository is to determine the capabilities and limita
 
 <p align="justify">
 
-This experiment used the CV2 modules <i>OpenCV-Python</i> and <i>OpenCV-Contrib-Python.</i>. These modules provides functions designed for real-time computer vision.  
+This experiment used the CV2 modules <i>OpenCV-Python</i> and <i>OpenCV-Contrib-Python.</i>. These modules provide functions designed for real-time computer vision, image processing and machine learning. 
 
+OpenCV is being used today for a wide range of applications which include:
 
+- Automated inspection and surveillance
+- Video/image search and retrieval
+- Medical image analysis
+- Criminal investigation
+- Vehicle tag recognition
+- Street view image stitching
+- Robot and driver-less car navigation and control
+- Signature pattern detection on documents
 
+This experiment will focus on the basics of face detection using the Haar feature-based Cascade classifiers. The Haar Cascade classifiers used in this experiment were:
 
-
-
-
-
-
-
-OpenCV is a library of programming functions mainly aimed at real-time computer vision
-  
- This opencv-python package is the Open Source Computer Vision (OpenCV), which is a computer vision and machine learning software library. Computer vision and digital image processing are currently being widely applied in face recognition, criminal investigation, signature pattern detection in banking, digital documents analysis and smart tag based vehicles for recognition. 
-</p>
-
- This opencv-python package is the Open Source Computer Vision (OpenCV), which is a computer vision and machine learning software library. Computer vision and digital image processing are currently being widely applied in face recognition, criminal investigation, signature pattern detection in banking, digital documents analysis and smart tag based vehicles for recognition. 
-
-<p align="justify">
-The LBPH face recognition algorithm was used in this experiment. Local Binary Pattern (LBP) is a simple and efficient texture operator which labels the pixels of an image by thresholding the neighborhood of each pixel and considers the result as a binary number. The experiment also uses the Haar Cascade, which is a machine learning object detection algorithm used to identify objects in an image or video and based on the concept of features.
-</p>
-
-The Haar Cascade classifiers used in this experiment were:
-
-1. haarcascade_frontalface_default.xml 
+1. haarcascade_frontalface_default.xml
 2. haarcascade_eye.xml
 3. haarcascade_mcs_nose.xml
 4. haarcascade_smile.xml
 
-<p align="justify">
-During testing it was noted that all these Haar Cascade classifiers were temperamental and required continually tuning of the parameters scaleFactor and minNeighbors used by detectMultiScale.  The angle of the faces within the images were also a key factor when detecting facial features. Images containing direct frontal faces produced the best results as shown below.
-</p>
+Additional Haar Cascade classifiers are available from these locations:
+
+1. https://github.com/opencv/opencv/tree/master/data/haarcascades
+2. http://alereimondo.no-ip.org/OpenCV/34.version?id=60
+
+It's worth noting that <i>Python</i> occasionally has issues locating the Haar Cascade classifiers on your system.  To solve this you can use the <i>Python</i> module <i>os</i> to find the absolute paths for the classifiers installed.  
+```python
+cv2_base_dir = os.path.dirname(os.path.abspath(cv2.__file__))
+haar_frontal_face_model = os.path.join(cv2_base_dir, 'data/haarcascade_frontalface_default.xml')
+haar_eye_model = os.path.join(cv2_base_dir, 'data/haarcascade_eye.xml')
+haar_mouth_model = os.path.join(cv2_base_dir, 'data/haarcascade_smile.xml')
+haar_nose_model = os.path.join(cv2_base_dir, 'data/haarcascade_mcs_nose.xml')
+```
 
 #### Haar Cascade - Facial Detection
+
+
+
 
 <p align="left">
   <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/facial_front_detection.jpg">
@@ -95,6 +99,12 @@ During testing it was noted that all these Haar Cascade classifiers were tempera
 
 
 
+<p align="justify">
+The LBPH face recognition algorithm was used in this experiment. Local Binary Pattern (LBP) is a simple and efficient texture operator which labels the pixels of an image by thresholding the neighborhood of each pixel and considers the result as a binary number. The experiment also uses the Haar Cascade, which is a machine learning object detection algorithm used to identify objects in an image or video and based on the concept of features.
+
+
+During testing it was noted that all these Haar Cascade classifiers were temperamental and required continually tuning of the parameters scaleFactor and minNeighbors used by detectMultiScale.  The angle of the faces within the images were also a key factor when detecting facial features. Images containing direct frontal faces produced the best results as shown below.
+</p>
 
 ### Experiment 2:
 
