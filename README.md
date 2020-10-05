@@ -60,13 +60,38 @@ The Haar Cascade classifiers used in this experiment were:
 During testing it was noted that all these Haar Cascade classifiers were temperamental and required continually tuning of the parameters scaleFactor and minNeighbors used by detectMultiScale.  The angle of the faces within the images were also a key factor when detecting facial features. Images containing direct frontal faces produced the best results as shown below.
 </p>
 
-<p align="center"> <br>
-<img src="https://github.com/johnbumgarner/image_simarility_experiments/blob/master/haar_cascade_features.jpg">
+#### Haar Cascade - Facial Detection
+
+<p align="center">
+  <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/facial_recognition.png">
 </p>
 
 
+#### Haar Cascade - Eye Detection
+
+<p align="center">
+  <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/eye_recognition.png">
+</p>
 
 
+#### Haar Cascade - Nose Detection
+
+<p align="center">
+  <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/nose_recognition.png">
+</p>
+
+
+#### Haar Cascade - Mouth Detection
+
+<p align="center">
+  <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/mouth_recognition.png">
+</p>
+
+#### Haar Cascade - Facial Detection
+
+<p align="center">
+  <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/all_features_recognition.png">
+</p>
 
 
 
