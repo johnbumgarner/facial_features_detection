@@ -69,27 +69,27 @@ During testing it was noted that all these Haar Cascade classifiers were tempera
 
 #### Haar Cascade - Eye Detection
 
-<p align="center">
+<p align="left">
   <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/eye_detection.jpg">
 </p>
 
 
 #### Haar Cascade - Nose Detection
 
-<p align="center">
+<p align="left">
   <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/nose_detection.jpg">
 </p>
 
 
 #### Haar Cascade - Mouth Detection
 
-<p align="center">
+<p align="left">
   <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/mouth_detection.jpg">
 </p>
 
 #### Haar Cascade - Facial Detection
 
-<p align="center">
+<p align="left">
   <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/all_features_detection.jpg">
 </p>
 
