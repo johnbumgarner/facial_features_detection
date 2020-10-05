@@ -90,7 +90,7 @@ During testing it was noted that all these Haar Cascade classifiers were tempera
 #### Haar Cascade - Facial Detection
 
 <p align="center">
-  <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/all_features_recognition.png">
+  <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/all_features_detection.jpg">
 </p>
 
 
