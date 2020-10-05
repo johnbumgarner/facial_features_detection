@@ -21,14 +21,29 @@ This repository is going to examine several of the methods used to ascertain if 
 Another objective of this repository is to determine the capabilities and limitations of the Python libraries used to perform these image simarility tests.
 </p>
 
+## Facial Detection and Features Identification
 
-## Facial Detection/Recognition/Prediction Experiments
-
-### Experiment 1:
+### Open Computer Vision Library (OpenCV):
 
 <p align="justify">
-This experiment used the Python module cv2. The Python package is opencv-python.  This opencv-python package is the Open Source Computer Vision (OpenCV), which is a computer vision and machine learning software library. Computer vision and digital image processing are currently being widely applied in face recognition, criminal investigation, signature pattern detection in banking, digital documents analysis and smart tag based vehicles for recognition. 
+
+This experiment used the CV2 modules <i>OpenCV-Python</i> and <i>OpenCV-Contrib-Python.</i>. These modules provides functions designed for real-time computer vision.  
+
+
+
+
+
+
+
+
+
+
+OpenCV is a library of programming functions mainly aimed at real-time computer vision
+  
+ This opencv-python package is the Open Source Computer Vision (OpenCV), which is a computer vision and machine learning software library. Computer vision and digital image processing are currently being widely applied in face recognition, criminal investigation, signature pattern detection in banking, digital documents analysis and smart tag based vehicles for recognition. 
 </p>
+
+ This opencv-python package is the Open Source Computer Vision (OpenCV), which is a computer vision and machine learning software library. Computer vision and digital image processing are currently being widely applied in face recognition, criminal investigation, signature pattern detection in banking, digital documents analysis and smart tag based vehicles for recognition. 
 
 <p align="justify">
 The LBPH face recognition algorithm was used in this experiment. Local Binary Pattern (LBP) is a simple and efficient texture operator which labels the pixels of an image by thresholding the neighborhood of each pixel and considers the result as a binary number. The experiment also uses the Haar Cascade, which is a machine learning object detection algorithm used to identify objects in an image or video and based on the concept of features.
