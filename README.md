@@ -61,7 +61,7 @@ haar_mouth_model = os.path.join(cv2_base_dir, 'data/haarcascade_smile.xml')
 haar_nose_model = os.path.join(cv2_base_dir, 'data/haarcascade_mcs_nose.xml')
 ```
 
-#### Haar Cascade - Facial Detection
+#### Haar Cascade Classifiers - Facial Detection
 
 One of the most basic Haar Cascade classifiers is the one used to detect the facial area of a human face looking directly at the camera. This base-level algorithm comes pretrained, so it is able to identify images that have human face characteristics and their associated parameters and ones that have no human face characteristics, such as an image of a cat.
 
@@ -85,7 +85,7 @@ The image of <i>Natalie Portman</i> below has a <i>bounding box</i> drawn around
 </p>
 
 
-#### Haar Cascade - Eye Detection
+#### Haar Cascade Classifiers - Eye Detection
 
 The eye area is another human facial characteristic that can be identified using the Haar Cascade classifier <i>haarcascade_eye.xml</i>, which is used in collaboration with the Haar Cascade classifier for identifing frontal faces. 
 
@@ -114,7 +114,7 @@ The image of Natalie Portman below has a <i>bounding box</i> drawn around the ey
 </p>
 
 
-#### Haar Cascade - Nose Detection
+#### Haar Cascade Classifiers - Nose Detection
 
 The nose area classifier <i>haarcascade_mcs_nose.xml</i> also works in concert with the Haar Cascade classifier used to identify frontal faces. 
 
@@ -142,7 +142,7 @@ The image of Natalie Portman below has a <i>bounding box</i> drawn around the no
   <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/nose_detection.jpg">
 </p>
 
-#### Haar Cascade - Mouth Detection
+#### Haar Cascade Classifiers - Mouth Detection
 
 This classifier uses the Haar Cascade <i>haarcascade_smile.xml</i> in conjunction with the Haar Cascade classifier used to identify frontal faces.
 
@@ -170,13 +170,17 @@ The image of Natalie Portman below has a <i>bounding box</i> drawn around the mo
   <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/mouth_detection.jpg">
 </p>
 
-#### Haar Cascade - All Facial Characteristics Detection
+#### Haar Cascade Classifiers - All Facial Characteristics Detection
 
 The image of Natalie Portman below has <i>bounding boxes</i> drawn around the all the facial characteristics previously identified by all the Haar Cascade classifiers listed above.
 
 <p align="left">
   <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/all_features_detection.jpg">
 </p>
+
+
+### Haar Cascade Classifiers Detection Issues:
+
 
 
 
