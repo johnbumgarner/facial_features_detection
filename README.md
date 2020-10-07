@@ -190,17 +190,28 @@ For instance the image below is of <i>Natalie Portman</i> from the movie <i>Blac
   <img src="https://github.com/johnbumgarner/facial_features_detection/blob/master/graphic/natalie_portman_black_swan.jpg", width="200" height="200">
 </p>
 
-The Haar Cascade classifiers <i>Frontal Face</i>. and <i>Nose</i> were able to properly identify these characteristics on this photograph.  The Haar Cascade classifier for <i>Eyes</i>, was not able to identify that facial feature on this image, likey because of the heavy eye makeup being worned by Ms. Portman. The mouth classifier also had difficulties accurately locating the mouth area in this photograph as shown in the image below. 
+The Haar Cascade classifiers <i>Frontal Face</i> and <i>Nose</i> were able to properly identify these characteristics on this photograph.  The Haar Cascade classifier for <i>Eyes</i>, was not able to identify that facial feature on this image, likey because of the heavy eye makeup being worned by Ms. Portman. The mouth classifier also had difficulties accurately locating the mouth area in this photograph as shown in the image below. 
 
 <p align="left">
   <img src="https://github.com/johnbumgarner/facial_features_detection/blob/master/graphic/mouth_detection_natalie_portman_black_swan.jpg", width="200" height="200">
 </p>
 
+
+The <i>Black Swan</i> transformation of <i>Natalie Portman</i> was an extreme example to showcase the <i>OpenCV Haar Cascade classifiers</i> limitations, so here is another example of the actress wearing dark sunglasses. 
+
 <p align="left">
   <img src="https://github.com/johnbumgarner/facial_features_detection/blob/master/graphic/natalie_portman_sunglasses.jpg", width="200" height="200">
 </p>
 
+The Haar Cascade classifiers <i>Frontal Face</i> was the only one of the 
 
+and <i>Nose</i> were able to properly identify these characteristics on this photograph.  The Haar Cascade classifier for <i>Eyes</i>, was not able to identify that facial feature on this image,
+
+
+<p align="left">
+  <img src="https://github.com/johnbumgarner/facial_features_detection/blob/master/graphic/mouth_detection_natalie_portman_sunglasses.jpg", width="200" height="200">
+  
+</p>
 
 ### Notes:
 
