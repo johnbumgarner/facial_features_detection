@@ -196,6 +196,10 @@ The Haar Cascade classifiers <i>Frontal Face</i>. and <i>Nose</i> were able to p
   <img src="https://github.com/johnbumgarner/facial_features_detection/blob/master/graphic/mouth_detection_natalie_portman_black_swan.jpg", width="200" height="200">
 </p>
 
+<p align="left">
+  <img src="https://github.com/johnbumgarner/facial_features_detection/blob/master/graphic/natalie_portman_sunglasses.jpg", width="200" height="200">
+</p>
+
 
 
 ### Notes:
