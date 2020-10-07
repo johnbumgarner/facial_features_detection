@@ -63,7 +63,21 @@ haar_nose_model = os.path.join(cv2_base_dir, 'data/haarcascade_mcs_nose.xml')
 
 #### Haar Cascade - Facial Detection
 
-One of the most basic Haar Cascade classifiers is the one used to detect the facial area of a human face looking directly at the camera. This base-level algorithm comes pretrained, so it is able to identify images that have human face characteristics and their associated parameters and one that have no human face characteristics.  The image of Natalie Portman below has a <i>bounding box</i> drawn around the entire facial area identified by the Haar Cascade classifier  <i>haarcascade_frontalface_default.xml.</i>
+One of the most basic Haar Cascade classifiers is the one used to detect the facial area of a human face looking directly at the camera. This base-level algorithm comes pretrained, so it is able to identify images that have human face characteristics and their associated parameters and one that have no human face characteristics.  
+
+
+```python
+# This code was extraction from mutiple functions in the script facial_detection_haar_cascade.py
+
+image_name = 'natalie_portman.jpeg'
+photograph = cv2.imread(image_name)
+grayscale_image = cv2.cvtColor(photograph, cv2.COLOR_BGR2GRAY)
+faces = face_cascade.detectMultiScale(grayscale_image, scaleFactor=1.3, minNeighbors=5)
+for (x_coordinate, y_coordinate, width, height) in faces:
+   cv2.rectangle(photograph, (x_coordinate, y_coordinate), (x_coordinate + width, y_coordinate + height), (255, 0, 255), 2)
+```
+
+The image of <i>Natalie Portman</i> below has a <i>bounding box</i> drawn around the entire facial area identified by the Haar Cascade classifier  <i>haarcascade_frontalface_default.xml.</i>
 
 <p align="left">
   <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/facial_front_detection.jpg">
