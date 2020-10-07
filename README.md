@@ -1,12 +1,24 @@
-# under construction
-
 <p align="center">
   <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/facial_recognition.png">
 </p>
 
-# Overview Facial Detection and Prediction
+# Overview Facial Detection 
 
 <p align="justify">
+
+Facial detection or recognition
+
+
+face recognition owned significant consideration and appreciated as one of the most promising applications in the field of image analysis. Face detection can consider a substantial part of face recognition operations. According to its strength to focus computational resources on the section of an image holding a face. The method of face detection in pictures is complicated because of variability present across human faces such as pose, expression, position and orientation, skin colour, the presence of glasses or facial hair, differences in camera gain, lighting conditions, and image resolution.
+
+
+notes: 
+https://towardsdatascience.com/face-detection-for-beginners-e58e8f21aad9
+https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_objdetect/py_face_detection/py_face_detection.html#face-detection
+http://www.willberger.org/cascade-haar-explained/
+https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_objdetect/py_face_detection/py_face_detection.html
+
+
 
 Most humans can look at two photos and quickly determine if the images are either similarity or dissimilarity in nature. Computers can be programmed to perform a similar task, but the results can vary, because of multiple factors(e.g., lighting conditions, perspectives) that humans can instinctively do automatically.  Humans have little difficulty seeing the subtle differents between a rose and a camellia or a gardenia and a rose. A computer on the other hand will recognize these objects as flowers, but would likely classify all of these images as a single type of flower, roses.   
 
@@ -17,9 +29,9 @@ There are numerous use cases for image similarities technologies. These use case
 ## Primary objective of this repository
 
 <p align="justify">
-This repository is going to examine several of the methods used to ascertain if two or more images have similarity or dissimilarity. The set of images used in these image simarility tests are publicly available photographs of well-known female actresses. One dataset has 12 images of these actresses wearing earrings. The different photos of Jennifer Aniston are within the first dataset.  The second dataset consists of 50 images of actresses with no duplicates.  The second set is more diversed, because it included mutiple skin tones and hair colors.   
-
-Another objective of this repository is to determine the capabilities and limitations of the Python libraries used to perform these image simarility tests.
+This repository is going to examine various methods and algorithms that can be used to identify specific facial characteristics, such as the eye and mouth areas of a human face. The 3 images used in these tests are of the well-known female actress <i>Natalie Portman</i>.
+  
+Another objective of this repository is to determine the capabilities and limitations of the Python libraries used to perform these facial characteristics tests.
 </p>
 
 ## Facial Detection and Features Identification
@@ -196,27 +208,25 @@ The Haar Cascade classifiers <i>Frontal Face</i> and <i>Nose</i> were able to pr
   <img src="https://github.com/johnbumgarner/facial_features_detection/blob/master/graphic/mouth_detection_natalie_portman_black_swan.jpg", width="200" height="200">
 </p>
 
-
 The <i>Black Swan</i> transformation of <i>Natalie Portman</i> was an extreme example to showcase the <i>OpenCV Haar Cascade classifiers</i> limitations, so here is another example of the actress wearing dark sunglasses. 
 
 <p align="left">
   <img src="https://github.com/johnbumgarner/facial_features_detection/blob/master/graphic/natalie_portman_sunglasses.jpg", width="200" height="200">
 </p>
 
-The Haar Cascade classifiers <i>Frontal Face</i> was the only one of the 
-
-and <i>Nose</i> were able to properly identify these characteristics on this photograph.  The Haar Cascade classifier for <i>Eyes</i>, was not able to identify that facial feature on this image,
-
+The Haar Cascade classifier <i>Frontal Face</i> was the only algorithm that was able to properly identify that core facial characteristic on this photograph.  
+Both the <i>Eyes</i> and <i>Nose</i> classifiers failed to detect those facial characteristics in the image. Like in the previous <i>Black Swan</i> photo the  
+mouth classifier also had difficulties accurately locating the mouth area in the photograph of <i>Natalie Portman</i> wearing sunglasses.  The results of the 
+mouth classifier are shown below.
 
 <p align="left">
   <img src="https://github.com/johnbumgarner/facial_features_detection/blob/master/graphic/mouth_detection_natalie_portman_sunglasses.jpg", width="200" height="200">
-  
+ 
 </p>
+
+Both the examples above were very basic levels of facial camouflage, but both were able to foil certain aspects of the <i>Haar Cascade classifiers.</i>. The website [CV Dazzle](https://cvdazzle.com) has more complex camouflage photographs that can be used in testing the capabilities and limitations of facial detection algorithms. 
+
 
 ### Notes:
 
 _The code within this repository is **not** production ready. It was **strictly** designed for experimental testing purposes only._
-
-
-
-
