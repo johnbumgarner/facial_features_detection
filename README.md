@@ -183,7 +183,17 @@ The image of Natalie Portman below has <i>bounding boxes</i> drawn around the al
 
 The <i>OpenCV Haar Cascade classifiers</i> have some detection issues. For example, if a person in an image has a hair style that obscures segements of their face from view then the <i>Haar Cascade Frontal Face classifier</i> might have problems detecting the person's face.  Other factors, such as excessive facial hair, sun glasses or heavy makeup can cause both rudimentary and some advanced facical detection algorithms to have errors in detecting various facial features. Some of these Haar Cascade classifiers algorithms were orginally trained using photographics of people with lighter skin tones, so some detection issues can occur with certain skin colors.  
 
+For instance the image below is of <i>Natalie Portman</i> from the movie <i>Black Swan</i>.  As you can see she is wearing heavy makeup for her role as <i>Nina</i>.  
 
+<p align="left">
+  <img src="https://github.com/johnbumgarner/facial_features_detection/blob/master/graphic/natalie_portman_black_swan.jpg", width="200" height="200">
+</p>
+
+The Haar Cascade classifiers <i>Frontal Face</i>. and <i>Nose</i> were able to properly identify these characteristics on this photograph.  The Haar Cascade classifier for <i>Eyes</i>, was not able to identify that facial feature on this image, likey because of the heavy eye makeup being worned by Ms. Portman. The mouth classifier also had difficulties accurately locating the mouth area in this photograph as shown in the image below. 
+
+<p align="left">
+  <img src="https://github.com/johnbumgarner/facial_features_detection/blob/master/graphic/mouth_detection_natalie_portman_black_swan.jpg", width="200" height="200">
+</p>
 
 
 
