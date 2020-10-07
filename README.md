@@ -63,18 +63,19 @@ haar_nose_model = os.path.join(cv2_base_dir, 'data/haarcascade_mcs_nose.xml')
 
 #### Haar Cascade - Facial Detection
 
-One of the most basic Haar Cascade classifiers is the one used to detect the facial area of a human face looking directly at the camera. This base-level algorithm comes pretrained, so it is able to identify images that have human face characteristics and their associated parameters and one that have no human face characteristics.  
+One of the most basic Haar Cascade classifiers is the one used to detect the facial area of a human face looking directly at the camera. This base-level algorithm comes pretrained, so it is able to identify images that have human face characteristics and their associated parameters and ones that have no human face characteristics, such as an image of a cat.
 
 
 ```python
-# This code was extraction from mutiple functions in the script facial_detection_haar_cascade.py
+# This code was extraction from mutiple functions in the script facial_features_haar_cascade_classifiers.py
 
 image_name = 'natalie_portman.jpeg'
 photograph = cv2.imread(image_name)
 grayscale_image = cv2.cvtColor(photograph, cv2.COLOR_BGR2GRAY)
 faces = face_cascade.detectMultiScale(grayscale_image, scaleFactor=1.3, minNeighbors=5)
 for (x_coordinate, y_coordinate, width, height) in faces:
-   cv2.rectangle(photograph, (x_coordinate, y_coordinate), (x_coordinate + width, y_coordinate + height), (255, 0, 255), 2)
+    cv2.rectangle(photograph, (x_coordinate, y_coordinate),
+                  (x_coordinate + width, y_coordinate + height), (255, 0, 255), 2)
 ```
 
 The image of <i>Natalie Portman</i> below has a <i>bounding box</i> drawn around the entire facial area identified by the Haar Cascade classifier  <i>haarcascade_frontalface_default.xml.</i>
@@ -86,7 +87,27 @@ The image of <i>Natalie Portman</i> below has a <i>bounding box</i> drawn around
 
 #### Haar Cascade - Eye Detection
 
-The eye area is another human face characteristic that can be identified using the Haar Cascade classifier <i>haarcascade_eye.xml</i>, which is used in collaboration with the Haar Cascade classifier for identifing frontal faces. The image of Natalie Portman below has a <i>bounding box</i> drawn around the eye area identified by the Haar Cascade classifier <i>haarcascade_eye.xml.</i>
+The eye area is another human facial characteristic that can be identified using the Haar Cascade classifier <i>haarcascade_eye.xml</i>, which is used in collaboration with the Haar Cascade classifier for identifing frontal faces. 
+
+```python
+# This code was extraction from mutiple functions in the script facial_features_haar_cascade_classifiers.py
+
+image_name = 'natalie_portman.jpeg'
+photograph = cv2.imread(image_name)
+grayscale_image = cv2.cvtColor(photograph, cv2.COLOR_BGR2GRAY)
+faces = face_cascade.detectMultiScale(grayscale_image, scaleFactor=1.3, minNeighbors=5)
+
+for (x_coordinate, y_coordinate, width, height) in faces:
+    roi_gray = grayscale_image[y_coordinate:y_coordinate + height, x_coordinate:x_coordinate + width]
+    roi_color = photograph[y_coordinate:y_coordinate + height, x_coordinate:x_coordinate + width]
+    eyes = eye_cascade.detectMultiScale(roi_gray, scaleFactor=1.3, minNeighbors=4, flags=cv2.CASCADE_SCALE_IMAGE)
+
+    for (eye_x_coordinate, eye_y_coordinate, eye_width, eye_height) in eyes:
+        cv2.rectangle(roi_color, (eye_x_coordinate, eye_y_coordinate),
+                  (eye_x_coordinate + eye_width, eye_y_coordinate + eye_height), (128, 0, 255), 2)
+```
+
+The image of Natalie Portman below has a <i>bounding box</i> drawn around the eye area identified by the Haar Cascade classifier <i>haarcascade_eye.xml.</i>
 
 <p align="left">
   <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/eye_detection.jpg">
@@ -95,7 +116,27 @@ The eye area is another human face characteristic that can be identified using t
 
 #### Haar Cascade - Nose Detection
 
-The nose area classifier <i>haarcascade_mcs_nose.xml</i> also works in concert with the Haar Cascade classifier used to identify frontal faces. The image of Natalie Portman below has a <i>bounding box</i> drawn around the nose area identified by the Haar Cascade classifier <i>haarcascade_mcs_nose.xml.</i>
+The nose area classifier <i>haarcascade_mcs_nose.xml</i> also works in concert with the Haar Cascade classifier used to identify frontal faces. 
+
+```python
+# This code was extraction from mutiple functions in the script facial_features_haar_cascade_classifiers.py
+
+image_name = 'natalie_portman.jpeg'
+photograph = cv2.imread(image_name)
+grayscale_image = cv2.cvtColor(photograph, cv2.COLOR_BGR2GRAY)
+faces = face_cascade.detectMultiScale(grayscale_image, scaleFactor=1.3, minNeighbors=5)
+
+for (x_coordinate, y_coordinate, width, height) in faces:
+    roi_gray = grayscale_image[y_coordinate:y_coordinate + height, x_coordinate:x_coordinate + width]
+    roi_color = photograph[y_coordinate:y_coordinate + height, x_coordinate:x_coordinate + width]
+    nose = nose_cascade.detectMultiScale(roi_gray, scaleFactor=1.3, minNeighbors=8, flags=cv2.CASCADE_SCALE_IMAGE)
+
+    for (nose_x_coordinate, nose_y_coordinate, nose_width, nose_height) in nose:
+        cv2.rectangle(roi_color, (nose_x_coordinate, nose_y_coordinate),
+                      (nose_x_coordinate + nose_width, nose_y_coordinate + nose_height), (255, 0, 0), 2)
+```
+
+The image of Natalie Portman below has a <i>bounding box</i> drawn around the nose area identified by the Haar Cascade classifier <i>haarcascade_mcs_nose.xml.</i>
 
 <p align="left">
   <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/nose_detection.jpg">
@@ -105,6 +146,24 @@ The nose area classifier <i>haarcascade_mcs_nose.xml</i> also works in concert w
 
 This classifier uses the Haar Cascade <i>haarcascade_smile.xml</i> in conjunction with the Haar Cascade classifier used to identify frontal faces.
 
+```python
+# This code was extraction from mutiple functions in the script facial_features_haar_cascade_classifiers.py
+
+image_name = 'natalie_portman.jpeg'
+photograph = cv2.imread(image_name)
+grayscale_image = cv2.cvtColor(photograph, cv2.COLOR_BGR2GRAY)
+faces = face_cascade.detectMultiScale(grayscale_image, scaleFactor=1.3, minNeighbors=5)
+
+for (x_coordinate, y_coordinate, width, height) in faces:
+    roi_gray = grayscale_image[y_coordinate:y_coordinate + height, x_coordinate:x_coordinate + width]
+    roi_color = photograph[y_coordinate:y_coordinate + height, x_coordinate:x_coordinate + width]
+    mouth = mouth_cascade.detectMultiScale(roi_gray, scaleFactor=1.3, minNeighbors=4, flags=cv2.CASCADE_SCALE_IMAGE)
+
+    for (mouth_x_coordinate, mouth_y_coordinate, mouth_width, mouth_height) in mouth:
+        cv2.rectangle(roi_color, (mouth_x_coordinate, mouth_y_coordinate),
+                      (mouth_x_coordinate + mouth_width, mouth_y_coordinate + mouth_height), (0, 255, 128), 2)
+```
+
 The image of Natalie Portman below has a <i>bounding box</i> drawn around the mouth area identified by the Haar Cascade classifier <i>haarcascade_smile.xml.</i>
 
 <p align="left">
@@ -113,12 +172,11 @@ The image of Natalie Portman below has a <i>bounding box</i> drawn around the mo
 
 #### Haar Cascade - All Facial Characteristics Detection
 
-The image of Natalie Portman below has <i>bounding boxes</i> drawn around the all the facial characteristics previously identified by all the Haar Cascade classifiers above.
+The image of Natalie Portman below has <i>bounding boxes</i> drawn around the all the facial characteristics previously identified by all the Haar Cascade classifiers listed above.
 
 <p align="left">
   <img src="https://github.com/johnbumgarner/facial_detection_prediction-/blob/master/graphic/all_features_detection.jpg">
 </p>
-
 
 
 
