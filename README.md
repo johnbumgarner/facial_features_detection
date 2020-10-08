@@ -6,23 +6,13 @@
 
 <p align="justify">
 
-Facial detection or recognition
+Facial detection or recognition technology is used throughout the image analysis fields. Face detection is the most essential step in all facical recognition algorithms. Face detection is a core component in objective detection and is used in many areas including biometrics, border control, law enforcement and physical security. These facical algorithms are most often used in real-time surveillance applications that can not only detect faces, but also track these faces as they move in a crowd.  
 
+Identifying faces in a crowd can be highly problematic, but these problems extend even to detecting faces in still images.  There are a lot of human characteristics and variabilities that cause problems for facial detection algorithms.  These variables include facial expressions, skin color, the presence of eye wear, makeup or facial hair, the position and orientation of any potential faces in an image and the lighting conditions in which the image was taken.  
 
-face recognition owned significant consideration and appreciated as one of the most promising applications in the field of image analysis. Face detection can consider a substantial part of face recognition operations. According to its strength to focus computational resources on the section of an image holding a face. The method of face detection in pictures is complicated because of variability present across human faces such as pose, expression, position and orientation, skin colour, the presence of glasses or facial hair, differences in camera gain, lighting conditions, and image resolution.
+Technology vendors, such as Apple has had detection issues with the facial recognition system known as Face ID on several models of their iPhones. Even Facebook has had issues with identify faces in photos that users post to the company's international social media platform. And let's not get started on the subtle differences between a [blueberry muffin and a chihuahua](https://www.bbc.com/news/business-48842750) to a facial detection algorithm.
 
-
-notes: 
-https://towardsdatascience.com/face-detection-for-beginners-e58e8f21aad9
-https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_objdetect/py_face_detection/py_face_detection.html#face-detection
-http://www.willberger.org/cascade-haar-explained/
-https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_objdetect/py_face_detection/py_face_detection.html
-
-
-
-Most humans can look at two photos and quickly determine if the images are either similarity or dissimilarity in nature. Computers can be programmed to perform a similar task, but the results can vary, because of multiple factors(e.g., lighting conditions, perspectives) that humans can instinctively do automatically.  Humans have little difficulty seeing the subtle differents between a rose and a camellia or a gardenia and a rose. A computer on the other hand will recognize these objects as flowers, but would likely classify all of these images as a single type of flower, roses.   
-
-There are numerous use cases for image similarities technologies. These use cases range from duplicate image detection to domain specific image clustering. Identifying duplicate images in Apple Photo is a common use case for many of us dealing with a large digital image library. Some of us have likey used Google’s Reverse Image Search to look for a specific photo that we want to know more about. Google will scour its massive database for images similar to the one used in your query. 
+Most humans can look at two photos and quickly determine that a delicious looking blueberry muffin is a lovable dog called a chihuahua. Computers can be programmed to perform this tasks and many more in the realm of facial detection. So let's explore how computers can be used in facial detection. 
 
 </p>
 
@@ -225,7 +215,6 @@ mouth classifier are shown below.
 </p>
 
 Both the examples above were very basic levels of facial camouflage, but both were able to foil certain aspects of the <i>Haar Cascade classifiers.</i>. The website [CV Dazzle](https://cvdazzle.com) has more complex camouflage photographs that can be used in testing the capabilities and limitations of facial detection algorithms. 
-
 
 ### Notes:
 
