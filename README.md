@@ -204,8 +204,7 @@ The <i>Black Swan</i> transformation of <i>Natalie Portman</i> was an extreme ex
   <img src="https://github.com/johnbumgarner/facial_features_detection/blob/master/graphic/natalie_portman_sunglasses.jpg", width="200" height="200">
 </p>
 
-The Haar Cascade classifier <i>Frontal Face</i> was the only algorithm that was able to properly identify that core facial characteristic on this photograph.  
-Both the <i>Eyes</i> and <i>Nose</i> classifiers failed to detect those facial characteristics in the image. Like in the previous <i>Black Swan</i> photo the  
+The Haar Cascade classifier <i>Frontal Face</i> was the only algorithm that was able to properly identify that core facial characteristic on this photograph. Both the <i>Eyes</i> and <i>Nose</i> classifiers failed to detect those facial characteristics in the image. Like in the previous <i>Black Swan</i> photo the  
 mouth classifier also had difficulties accurately locating the mouth area in the photograph of <i>Natalie Portman</i> wearing sunglasses.  The results of the 
 mouth classifier are shown below.
 
