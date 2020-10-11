@@ -57,6 +57,8 @@ Additional Haar Cascade classifiers are available from these locations:
 
 It's worth noting that <i>Python</i> occasionally has issues locating the Haar Cascade classifiers on your system.  To solve this you can use the <i>Python</i> module <i>os</i> to find the absolute paths for the classifiers installed.  
 ```python
+# This code was extracted from the script facial_features_haar_cascade_classifiers.py
+
 cv2_base_dir = os.path.dirname(os.path.abspath(cv2.__file__))
 haar_frontal_face_model = os.path.join(cv2_base_dir, 'data/haarcascade_frontalface_default.xml')
 haar_eye_model = os.path.join(cv2_base_dir, 'data/haarcascade_eye.xml')
