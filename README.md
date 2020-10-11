@@ -70,7 +70,7 @@ One of the most basic Haar Cascade classifiers is the one used to detect the fac
 
 
 ```python
-# This code was extraction from mutiple functions in the script facial_features_haar_cascade_classifiers.py
+# This code was extracted from mutiple functions in the script facial_features_haar_cascade_classifiers.py
 
 image_name = 'natalie_portman.jpeg'
 photograph = cv2.imread(image_name)
@@ -93,7 +93,7 @@ The image of <i>Natalie Portman</i> below has a <i>bounding box</i> drawn around
 The eye area is another human facial characteristic that can be identified using the Haar Cascade classifier <i>haarcascade_eye.xml</i>, which is used in collaboration with the Haar Cascade classifier for identifing frontal faces. 
 
 ```python
-# This code was extraction from mutiple functions in the script facial_features_haar_cascade_classifiers.py
+# This code was extracted from mutiple functions in the script facial_features_haar_cascade_classifiers.py
 
 image_name = 'natalie_portman.jpeg'
 photograph = cv2.imread(image_name)
@@ -122,7 +122,7 @@ The image of Natalie Portman below has a <i>bounding box</i> drawn around the ey
 The nose area classifier <i>haarcascade_mcs_nose.xml</i> also works in concert with the Haar Cascade classifier used to identify frontal faces. 
 
 ```python
-# This code was extraction from mutiple functions in the script facial_features_haar_cascade_classifiers.py
+# This code was extracted from mutiple functions in the script facial_features_haar_cascade_classifiers.py
 
 image_name = 'natalie_portman.jpeg'
 photograph = cv2.imread(image_name)
@@ -150,7 +150,7 @@ The image of Natalie Portman below has a <i>bounding box</i> drawn around the no
 This classifier uses the Haar Cascade <i>haarcascade_smile.xml</i> in conjunction with the Haar Cascade classifier used to identify frontal faces.
 
 ```python
-# This code was extraction from mutiple functions in the script facial_features_haar_cascade_classifiers.py
+# This code was extracted from mutiple functions in the script facial_features_haar_cascade_classifiers.py
 
 image_name = 'natalie_portman.jpeg'
 photograph = cv2.imread(image_name)
